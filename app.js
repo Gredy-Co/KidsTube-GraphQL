@@ -5,8 +5,7 @@ const cors              = require("cors");
 const mongoose          = require("mongoose");
 const schema            = require("./schemas/schema");
 const root              = require("./resolvers/Resolver");
-const authMiddleware    = require("./middleware/auth");
-
+const authMiddleware    = require("./middleware/auth"); 
 const app = express();
 
 app.use(cors());

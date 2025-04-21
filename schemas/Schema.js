@@ -12,7 +12,6 @@ const schema = buildSchema(`
   type Playlist {
     id: ID!
     name: String
-    description: String
     createdBy: ID!
     associatedProfiles: [Profile]
     videos: [Video]
@@ -30,8 +29,7 @@ const schema = buildSchema(`
     profiles(userId: ID!): [Profile]
     playlistsByUser(userId: ID!): [Playlist]
     videosByUser(userId: ID!): [Video]
-
-
+    playlistsByProfile(profileId: ID!): [Playlist]
   }
 `);
 
