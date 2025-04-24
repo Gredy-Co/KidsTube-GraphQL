@@ -146,5 +146,3 @@ El middleware `authMiddleware` verifica el token y lo decodifica para obtener el
 Este proyecto está bajo la licencia ISC. Puedes usar, modificar y distribuir este software de acuerdo con los términos de la licencia.
 
 
-Licencia
-Este proyecto está bajo la licencia ISC . Puedes usar, modificar y distribuir este software de acuerdo con los términos de la licencia.
