@@ -6,7 +6,7 @@ const axios = require("axios");
 
 const { YOUTUBE_API_KEY } = process.env;
 
-// Utilidades
+// Util
 function mapYoutubeResponse(items) {
   return items.map((item) => ({
     id: item.id.videoId || item.id,
@@ -131,7 +131,7 @@ async function SearchVideos(_args, context) {
   }
 }
 
-async function popularVideos() {
+async function popularVideos(_args, context) {
   try {
     const response = await axios.get("https://www.googleapis.com/youtube/v3/videos", {
       params: {
