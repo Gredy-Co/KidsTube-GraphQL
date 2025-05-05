@@ -109,7 +109,7 @@ async function VideosByProfile(_args, context) {
   }
 }
 
-async function SearchVideos(_args, context) {
+async function searchVideos(_args, context) {
   try {
     const query = _args.query;
     if (!query) throw new Error('El parámetro "query" es requerido');
@@ -157,7 +157,7 @@ module.exports = {
   profiles,
   playlistsByProfile,
   VideosByProfile,
-  SearchVideos,
+  searchVideos,
   popularVideos,
 };
 
