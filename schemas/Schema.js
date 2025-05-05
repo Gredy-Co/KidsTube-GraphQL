@@ -3,12 +3,19 @@ const { buildSchema } = require("graphql");
 const schema = buildSchema(`
     type Video {
     id: ID!
-    title: String
+    name: String
     description: String
     url: String
     createdBy: ID!
   }
-
+  type VideoYoutube {
+      id: ID!,
+      name: String,
+      description: String,
+      url: String,
+      thumbnail: String,
+      channelTitle: String,
+  }
   type Playlist {
     id: ID!
     name: String
@@ -26,10 +33,13 @@ const schema = buildSchema(`
   }
 
   type Query {
-    profiles(userId: ID!): [Profile]
-    playlistsByUser(userId: ID!): [Playlist]
-    videosByUser(userId: ID!): [Video]
-    playlistsByProfile(profileId: ID!): [Playlist]
+    profiles: [Profile]
+    playlistsByUser: [Playlist]
+    videosByUser: [Video]
+    playlistsByProfile(profileId: ID!): [Playlist] 
+    videosByProfile(profileId: ID!): [Video]
+    searchVideos(query: String!): [VideoYoutube]
+    popularVideos: [VideoYoutube]
   }
 `);
 
